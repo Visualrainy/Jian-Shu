@@ -1,7 +1,8 @@
-package com.guild.jianshu
+package com.guild.jianshu.features
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.guild.jianshu.R
 
 class MainActivity : AppCompatActivity() {
 
