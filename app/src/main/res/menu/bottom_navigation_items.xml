@@ -4,27 +4,27 @@
     <item
         android:id="@+id/subscription"
         android:icon="@drawable/tabbar_subscription_selector"
-        app:showAsAction="always"
-        android:title="@string/subscription" />
+        android:title="@string/subscription"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/discovery"
 
-        app:showAsAction="always"
         android:icon="@drawable/tabbar_discovery_selector"
-        android:title="@string/discovery" />
+        android:title="@string/discovery"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/publish"
-        app:showAsAction="always"
         android:icon="@drawable/tabbar_write_icon"
-        android:title="@string/publish" />
+        android:title="@string/publish"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/notification"
-        app:showAsAction="always"
         android:icon="@drawable/tabbar_notification_selector"
-        android:title="@string/notification" />
+        android:title="@string/notification"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/profile"
-        app:showAsAction="always"
         android:icon="@drawable/tabbar_profile_selector"
-        android:title="@string/profile" />
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
 </menu>
