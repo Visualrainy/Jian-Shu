@@ -29,6 +29,7 @@ dependencies {
     implementation appDependencies.kotlin_stdlib
     implementation googleDependencies.support_appcompat
     implementation googleDependencies.support_constraint
+    implementation googleDependencies.support_design
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.test_runner
