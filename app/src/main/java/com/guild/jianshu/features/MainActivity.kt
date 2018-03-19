@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private fun initNavigationView() {
         bottom_navigation.setOnNavigationItemSelectedListener({item ->
             when(item.itemId) {
-                R.id.recent -> {
+                R.id.subscription -> {
                     Log.d(LOG_TAG, "click recent")
                 }
                 R.id.discovery -> {
