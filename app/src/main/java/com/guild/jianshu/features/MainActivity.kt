@@ -13,7 +13,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val LOG_TAG = "MainActivity"
+    companion object {
+        private const val LOG_TAG = "MainActivity"
+    }
     private var mFragments: ArrayList<BaseFragment>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
