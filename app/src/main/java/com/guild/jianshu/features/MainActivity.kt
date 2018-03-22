@@ -3,6 +3,7 @@ package com.guild.jianshu.features
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.Menu
 import com.guild.jianshu.R
 import com.guild.jianshu.features.discovery.DiscoveryFragment
 import com.guild.jianshu.features.message.MessageFragment
@@ -10,12 +11,14 @@ import com.guild.jianshu.features.profile.ProfileFragment
 import com.guild.jianshu.features.publish.PublishFragment
 import com.guild.jianshu.features.recents.RecentFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val LOG_TAG = "MainActivity"
     }
+
     private var mFragments: ArrayList<BaseFragment>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         initFragment()
         initNavigationView()
+        setSupportActionBar(main_toolbar)
     }
 
     private fun initFragment() {
@@ -60,5 +64,10 @@ class MainActivity : AppCompatActivity() {
             transaction.commit()
             true
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.action_bar_items, menu)
+        return true
     }
 }
