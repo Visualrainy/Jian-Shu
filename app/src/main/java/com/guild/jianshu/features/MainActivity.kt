@@ -11,7 +11,6 @@ import com.guild.jianshu.features.profile.ProfileFragment
 import com.guild.jianshu.features.publish.PublishFragment
 import com.guild.jianshu.features.recents.RecentFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.main_toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         initFragment()
         initNavigationView()
-        setSupportActionBar(main_toolbar)
+        setSupportActionBar(findViewById(R.id.main_toolbar))
     }
 
     private fun initFragment() {
