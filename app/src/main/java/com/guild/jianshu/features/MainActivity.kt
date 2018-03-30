@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> {
                     Log.d(LOG_TAG, "click profile")
                     transaction.replace(R.id.fragment_container, mFragments!![4])
+                    supportActionBar?.title = "我的"
                 }
             }
             transaction.commit()
