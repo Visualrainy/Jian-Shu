@@ -5,4 +5,10 @@
     <string name="notification">Notification</string>
     <string name="discovery">Discovery</string>
     <string name="publish">Publish</string>
+
+    <!--profile article-->
+    <string name="secret_article">私密文章</string>
+    <string name="collection_article">收藏的文章</string>
+    <string name="like_article">喜欢的文章</string>
+    <string name="paid_article">拥有的付费内容</string>
 </resources>

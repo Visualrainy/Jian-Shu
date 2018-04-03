@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profile_article">
+        <item>@string/secret_article</item>
+        <item>@string/collection_article</item>
+        <item>@string/like_article</item>
+        <item>@string/paid_article</item>
+    </string-array>
+</resources>

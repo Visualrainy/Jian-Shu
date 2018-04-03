@@ -27,7 +27,12 @@ class ProfileFragment : BaseFragment() {
 
     private fun populateProfileContainerView(view: View?, inflater: LayoutInflater?) {
         val profileContainerView = view?.findViewById<LinearLayout>(R.id.profile_article_container)
-        profileContainerView?.addView(ProfileItemView(context))
+        val articleItemsTitle = resources.getStringArray(R.array.profile_article)
+        articleItemsTitle.forEach({
+            val profileItemView = ProfileItemView(context)
+            profileItemView.setItemName(it)
+            profileContainerView?.addView(profileItemView)
+        })
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
