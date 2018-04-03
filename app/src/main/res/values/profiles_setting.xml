@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="profile_article">
+    <string-array name="profile_articles">
         <item>@string/secret_article</item>
         <item>@string/collection_article</item>
         <item>@string/like_article</item>
         <item>@string/paid_article</item>
     </string-array>
+    <array name="profile_article_icons">
+        <item>@drawable/profile_secret_icon</item>
+        <item>@drawable/profile_mark_icon</item>
+        <item>@drawable/profile_like_icon</item>
+        <item>@drawable/profile_paid_icon</item>
+    </array>
 </resources>

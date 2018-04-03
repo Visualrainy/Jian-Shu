@@ -17,7 +17,11 @@ class ProfileItemView : ConstraintLayout {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    public fun setItemName(itemName: String) {
+    fun setItemName(itemName: String) {
         profile_item_name.text = itemName
+    }
+
+    fun setItemIcon(iconResId: Int) {
+        profile_item_view.setImageResource(iconResId)
     }
 }
