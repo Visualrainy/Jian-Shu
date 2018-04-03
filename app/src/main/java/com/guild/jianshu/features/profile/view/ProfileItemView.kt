@@ -10,12 +10,22 @@ import kotlinx.android.synthetic.main.profile_item_view.view.*
 class ProfileItemView : ConstraintLayout {
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.profile_item_view, this)
+        initView()
     }
 
     constructor(context: Context) : super(context)
+
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+
+    private fun initView() {
+        val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        params.topMargin = resources.getDimensionPixelSize(R.dimen.margin_small)
+        params.bottomMargin = params.topMargin
+        layoutParams = params
+
+        LayoutInflater.from(context).inflate(R.layout.profile_item_view, this)
+    }
 
     fun setItemName(itemName: String) {
         profile_item_name.text = itemName
