@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.guild.jianshu.R
 import com.guild.jianshu.features.BaseFragment
+import com.guild.jianshu.features.profile.helper.ProfileHelper
 import com.guild.jianshu.features.profile.view.ProfileItemView
 
 /**
@@ -27,6 +28,11 @@ class ProfileFragment : BaseFragment() {
 
     private fun populateProfileContainerView(view: View?, inflater: LayoutInflater?) {
         val profileContainerView = view?.findViewById<LinearLayout>(R.id.profile_article_container)
+
+        val profileContainerItems = ProfileHelper.getProfileContainerItems(resources,
+                R.array.profile_articles, R.array.profile_article_icons)
+
+
         val articleItemsTitle = resources.getStringArray(R.array.profile_articles)
         val articleItemsIcons = resources.obtainTypedArray(R.array.profile_article_icons)
         articleItemsTitle.forEachIndexed({ index: Int, str: String ->
