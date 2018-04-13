@@ -30,10 +30,11 @@ class ProfileFragment : BaseFragment() {
         val articleItemsTitle = resources.getStringArray(R.array.profile_articles)
         val articleItemsIcons = resources.obtainTypedArray(R.array.profile_article_icons)
         articleItemsTitle.forEachIndexed({ index: Int, str: String ->
-            val profileItemView = ProfileItemView(context)
-            profileItemView.setItemName(str)
-            profileItemView.setItemIcon(articleItemsIcons.getResourceId(index, -1))
-            profileContainerView?.addView(profileItemView)
+            ProfileItemView(context).let {
+                it.setItemName(str)
+                it.setItemIcon(articleItemsIcons.getResourceId(index, -1))
+                profileContainerView?.addView(it)
+            }
         })
         articleItemsIcons.recycle()
     }
