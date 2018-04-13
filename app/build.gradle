@@ -16,13 +16,24 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+//    flavorDimensionList "api","mode"
+//    productFlavors {
+//        demoxx {
+//
+//        }
+//    }
 }
+//task test456() {
+//    doFirst {}
+//    println '456456'+project.projectDir
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

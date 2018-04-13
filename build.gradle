@@ -25,3 +25,20 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//task test123() {
+//    Settings.properties.each {
+//        println "test123" + it
+//    }
+//    println '123123'+Project.DEFAULT_BUILD_FILE
+//    println "123123123"+Settings.DEFAULT_SETTINGS_FILE
+//    def test=[1, 2, 3]
+//    test.each {
+//
+//    }
+//    test.eachWithIndex { int entry, int i ->
+//        println i
+//    }
+//    def amap=['key': 1, 'key2':2]
+//    amap.findAll {}
+//}
