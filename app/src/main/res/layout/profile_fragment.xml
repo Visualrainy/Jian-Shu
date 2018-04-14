@@ -64,7 +64,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-        <LinearLayout
+        <com.guild.jianshu.features.profile.view.ProfileContainerView
             android:id="@+id/profile_mine_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_article_container" />
 
-        <LinearLayout
+        <com.guild.jianshu.features.profile.view.ProfileContainerView
             android:id="@+id/profile_setting_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

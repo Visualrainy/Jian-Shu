@@ -6,10 +6,17 @@
         <item>@string/like_article</item>
         <item>@string/paid_article</item>
     </string-array>
+    <string-array name="profile_mine">
+        <item>@string/my_topic</item>
+        <item>@string/my_article</item>
+        <item>@string/my_followed_topic_article</item>
+        <item>@string/my_wallet</item>
+    </string-array>
     <array name="profile_article_icons">
         <item>@drawable/profile_secret_icon</item>
         <item>@drawable/profile_mark_icon</item>
         <item>@drawable/profile_like_icon</item>
         <item>@drawable/profile_paid_icon</item>
     </array>
+
 </resources>

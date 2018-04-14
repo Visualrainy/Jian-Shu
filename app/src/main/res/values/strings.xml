@@ -11,4 +11,9 @@
     <string name="collection_article">收藏的文章</string>
     <string name="like_article">喜欢的文章</string>
     <string name="paid_article">拥有的付费内容</string>
+    <!--profile mine-->
+    <string name="my_topic">我的专题</string>
+    <string name="my_article">我的文集</string>
+    <string name="my_followed_topic_article">关注的专题/文集/连载</string>
+    <string name="my_wallet">我的钱包</string>
 </resources>

@@ -26,11 +26,20 @@ class ProfileFragment : BaseFragment() {
     }
 
     private fun populateProfileContainerView(view: View?, inflater: LayoutInflater?) {
-        val profileContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_article_container)
-
+        val profileArticleContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_article_container)
         val profileArticleContainerItems = ProfileHelper.getProfileContainerItems(resources,
                 R.array.profile_articles, R.array.profile_article_icons)
-        profileContainerView?.setAdapter(ProfileContainerAdapter(profileArticleContainerItems))
+        profileArticleContainerView?.setAdapter(ProfileContainerAdapter(profileArticleContainerItems))
+
+        val profileMineContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_mine_container)
+        val profileMineContainerItems = ProfileHelper.getProfileContainerItems(resources,
+                R.array.profile_mine, R.array.profile_article_icons)
+        profileMineContainerView?.setAdapter(ProfileContainerAdapter(profileMineContainerItems))
+
+//        val profileSettingContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_setting_container)
+//        val profileMineContainerItems = ProfileHelper.getProfileContainerItems(resources,
+//                R.array.profile_mine, R.array.profile_article_icons)
+//        profileSettingContainerView?.setAdapter(ProfileContainerAdapter(profileMineContainerItems))
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
