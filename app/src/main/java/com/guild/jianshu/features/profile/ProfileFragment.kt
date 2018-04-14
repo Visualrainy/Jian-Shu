@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import com.guild.jianshu.R
 import com.guild.jianshu.features.BaseFragment
 import com.guild.jianshu.features.profile.helper.ProfileHelper
-import com.guild.jianshu.features.profile.view.ProfileItemView
+import com.guild.jianshu.features.profile.view.ProfileContainerView
 
 /**
  * Created by pchen on 20/03/2018.
@@ -27,22 +26,11 @@ class ProfileFragment : BaseFragment() {
     }
 
     private fun populateProfileContainerView(view: View?, inflater: LayoutInflater?) {
-        val profileContainerView = view?.findViewById<LinearLayout>(R.id.profile_article_container)
+        val profileContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_article_container)
 
-        val profileContainerItems = ProfileHelper.getProfileContainerItems(resources,
+        val profileArticleContainerItems = ProfileHelper.getProfileContainerItems(resources,
                 R.array.profile_articles, R.array.profile_article_icons)
-
-
-        val articleItemsTitle = resources.getStringArray(R.array.profile_articles)
-        val articleItemsIcons = resources.obtainTypedArray(R.array.profile_article_icons)
-        articleItemsTitle.forEachIndexed({ index: Int, str: String ->
-            ProfileItemView(context).let {
-                it.setItemName(str)
-                it.setItemIcon(articleItemsIcons.getResourceId(index, -1))
-                profileContainerView?.addView(it)
-            }
-        })
-        articleItemsIcons.recycle()
+        profileContainerView?.setAdapter(ProfileContainerAdapter(profileArticleContainerItems))
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {

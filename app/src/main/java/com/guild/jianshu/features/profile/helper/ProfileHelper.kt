@@ -11,7 +11,7 @@ class ProfileHelper {
             val itemIcons = resources.obtainTypedArray(itemIconRes)
 
             itemNames.forEachIndexed({ index: Int, itemName: String ->
-                var profileItem = ProfileItem(itemName, itemIcons.getResourceId(index, -1))
+                val profileItem = ProfileItem(itemName, itemIcons.getResourceId(index, -1))
                 profileItems.add(profileItem)
             })
             itemIcons.recycle()

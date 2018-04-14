@@ -4,7 +4,7 @@ import android.content.Context
 import com.guild.jianshu.features.profile.view.ProfileContainerView
 import com.guild.jianshu.features.profile.view.ProfileItemView
 
-class ProfileContainerAdapter(var items: ArrayList<ProfileItem>) {
+class ProfileContainerAdapter(var items: List<ProfileItem>) {
 
     fun getCount(): Int {
         return items.size
