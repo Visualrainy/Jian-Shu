@@ -38,6 +38,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation appDependencies.kotlin_stdlib
+    implementation appDependencies.kotlin_ktx
     implementation googleDependencies.support_appcompat
     implementation googleDependencies.support_constraint
     implementation googleDependencies.support_design

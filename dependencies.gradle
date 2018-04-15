@@ -1,12 +1,13 @@
 ext {
     googleDependencies = [
-            support_appcompat:  'com.android.support:appcompat-v7:26.1.0',
+            support_appcompat:  'com.android.support:appcompat-v7:27.1.1',
             support_constraint: 'com.android.support.constraint:constraint-layout:1.0.2',
-            support_design: 'com.android.support:design:26.1.0'
+            support_design: 'com.android.support:design:27.1.1'
     ]
 
     appDependencies = [
-            kotlin_stdlib:  "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+            kotlin_stdlib:  "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+            kotlin_ktx: 'androidx.core:core-ktx:0.3'
     ]
 
     testDependencies = [
