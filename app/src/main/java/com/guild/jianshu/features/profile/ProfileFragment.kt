@@ -33,13 +33,18 @@ class ProfileFragment : BaseFragment() {
 
         val profileMineContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_mine_container)
         val profileMineContainerItems = ProfileHelper.getProfileContainerItems(resources,
-                R.array.profile_mine, R.array.profile_article_icons)
+                R.array.profile_mine, R.array.profile_mine_icons)
         profileMineContainerView?.setAdapter(ProfileContainerAdapter(profileMineContainerItems))
 
-//        val profileSettingContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_setting_container)
-//        val profileMineContainerItems = ProfileHelper.getProfileContainerItems(resources,
-//                R.array.profile_mine, R.array.profile_article_icons)
-//        profileSettingContainerView?.setAdapter(ProfileContainerAdapter(profileMineContainerItems))
+        val profileSettingContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_setting_container)
+        val profileSettingItems = ProfileHelper.getProfileContainerItems(resources,
+                R.array.profile_settings, R.array.profile_settings_icons)
+        profileSettingContainerView?.setAdapter(ProfileContainerAdapter(profileSettingItems))
+
+        val profileFeedbackContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_feedback_container)
+        val profileFeedbackItems = ProfileHelper.getProfileContainerItems(resources,
+                R.array.profile_feedback, R.array.profile_feedback_icons)
+        profileFeedbackContainerView?.setAdapter(ProfileContainerAdapter(profileFeedbackItems))
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {

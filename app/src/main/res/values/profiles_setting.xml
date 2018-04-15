@@ -6,17 +6,44 @@
         <item>@string/like_article</item>
         <item>@string/paid_article</item>
     </string-array>
+    <array name="profile_article_icons">
+        <item>@drawable/profile_secret_icon</item>
+        <item>@drawable/profile_mark_icon</item>
+        <item>@drawable/profile_like_icon</item>
+        <item>@drawable/profile_paid_icon</item>
+    </array>
+
     <string-array name="profile_mine">
         <item>@string/my_topic</item>
         <item>@string/my_article</item>
         <item>@string/my_followed_topic_article</item>
         <item>@string/my_wallet</item>
     </string-array>
-    <array name="profile_article_icons">
-        <item>@drawable/profile_secret_icon</item>
-        <item>@drawable/profile_mark_icon</item>
-        <item>@drawable/profile_like_icon</item>
-        <item>@drawable/profile_paid_icon</item>
+    <array name="profile_mine_icons">
+        <item>@drawable/profile_topic_icon</item>
+        <item>@drawable/profile_article_icon</item>
+        <item>@drawable/profile_tick_icon</item>
+        <item>@drawable/profile_wallet_icon</item>
+    </array>
+
+    <string-array name="profile_settings">
+        <item>@string/night_mode</item>
+        <item>@string/browse_history</item>
+    </string-array>
+    <array name="profile_settings_icons">
+        <item>@drawable/profile_night_icon</item>
+        <item>@drawable/profile_history_icon</item>
+    </array>
+
+    <string-array name="profile_feedback">
+        <item>@string/share_jianshu</item>
+        <item>@string/help_feedback</item>
+        <item>@string/rate_jianshu</item>
+    </string-array>
+    <array name="profile_feedback_icons">
+        <item>@drawable/profile_share_icon</item>
+        <item>@drawable/profile_feedback_icon</item>
+        <item>@drawable/profile_rate_icon</item>
     </array>
 
 </resources>

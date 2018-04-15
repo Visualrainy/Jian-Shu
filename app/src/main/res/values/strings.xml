@@ -16,4 +16,11 @@
     <string name="my_article">我的文集</string>
     <string name="my_followed_topic_article">关注的专题/文集/连载</string>
     <string name="my_wallet">我的钱包</string>
+    <!--profile settings-->
+    <string name="night_mode">夜间模式</string>
+    <string name="browse_history">浏览记录</string>
+    <!--app feedback-->
+    <string name="share_jianshu">分享简书</string>
+    <string name="help_feedback">帮助与反馈</string>
+    <string name="rate_jianshu">给简书评分</string>
 </resources>
