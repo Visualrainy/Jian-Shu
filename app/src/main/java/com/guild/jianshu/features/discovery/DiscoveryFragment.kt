@@ -12,9 +12,7 @@ import com.guild.jianshu.features.BaseFragment
  */
 class DiscoveryFragment : BaseFragment() {
     companion object {
-        fun newInstance(): DiscoveryFragment {
-            return DiscoveryFragment()
-        }
+        fun newInstance(): DiscoveryFragment = DiscoveryFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

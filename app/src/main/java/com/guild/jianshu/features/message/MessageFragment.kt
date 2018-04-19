@@ -12,9 +12,7 @@ import com.guild.jianshu.features.BaseFragment
  */
 class MessageFragment : BaseFragment() {
     companion object {
-        fun newInstance(): MessageFragment {
-            return MessageFragment()
-        }
+        fun newInstance(): MessageFragment = MessageFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

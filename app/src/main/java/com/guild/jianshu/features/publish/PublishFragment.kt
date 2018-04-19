@@ -12,9 +12,7 @@ import com.guild.jianshu.features.BaseFragment
  */
 class PublishFragment : BaseFragment() {
     companion object {
-        fun newInstance(): PublishFragment {
-            return PublishFragment()
-        }
+        fun newInstance(): PublishFragment = PublishFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

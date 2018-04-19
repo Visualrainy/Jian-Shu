@@ -12,9 +12,7 @@ import com.guild.jianshu.features.BaseFragment
  */
 class RecentFragment : BaseFragment() {
     companion object {
-        fun newInstance(): RecentFragment {
-            return RecentFragment()
-        }
+        fun newInstance(): RecentFragment = RecentFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
