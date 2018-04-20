@@ -10,6 +10,7 @@ import com.guild.jianshu.features.message.MessageFragment
 import com.guild.jianshu.features.profile.ProfileFragment
 import com.guild.jianshu.features.publish.PublishFragment
 import com.guild.jianshu.features.recents.RecentFragment
+import com.guild.jianshu.features.view.disableShiftMode
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initNavigationView() {
+        bottom_navigation.disableShiftMode()
         bottom_navigation.setOnNavigationItemSelectedListener({ item ->
             val transaction = supportFragmentManager.beginTransaction()
             when (item.itemId) {
