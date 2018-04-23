@@ -34,5 +34,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_items" />
+        app:itemTextColor="@color/menu_text_gray"
+        app:menu="@menu/bottom_navigation_items"/>
 </android.support.constraint.ConstraintLayout>

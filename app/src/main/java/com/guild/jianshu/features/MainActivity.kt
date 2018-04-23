@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initNavigationView() {
         bottom_navigation.disableShiftMode()
+        bottom_navigation.itemIconTintList = null
         bottom_navigation.setOnNavigationItemSelectedListener({ item ->
             val transaction = supportFragmentManager.beginTransaction()
             when (item.itemId) {

@@ -8,7 +8,6 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/discovery"
-
         android:icon="@drawable/tabbar_discovery_selector"
         android:title="@string/discovery"
         app:showAsAction="ifRoom" />
