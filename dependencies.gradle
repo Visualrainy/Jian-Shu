@@ -2,7 +2,10 @@ ext {
     googleDependencies = [
             support_appcompat:  'com.android.support:appcompat-v7:27.1.1',
             support_constraint: 'com.android.support.constraint:constraint-layout:1.0.2',
-            support_design: 'com.android.support:design:27.1.1'
+            support_design: 'com.android.support:design:27.1.1',
+            lifecycle_extensions: 'android.arch.lifecycle:extensions:1.1.1',
+            lifecycle_compiler: 'android.arch.lifecycle:compiler:1.1.1',
+            lifecycle_reactivestreams: 'android.arch.lifecycle:reactivestreams:1.1.1'
     ]
 
     appDependencies = [

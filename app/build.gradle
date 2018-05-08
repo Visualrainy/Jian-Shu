@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 apply from: "$rootProject.projectDir/dependencies.gradle"
 
 android {
@@ -42,6 +44,9 @@ dependencies {
     implementation googleDependencies.support_appcompat
     implementation googleDependencies.support_constraint
     implementation googleDependencies.support_design
+    implementation googleDependencies.lifecycle_extensions
+    implementation googleDependencies.lifecycle_reactivestreams
+    kapt googleDependencies.lifecycle_compiler
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.test_runner

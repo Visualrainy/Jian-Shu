@@ -1,5 +1,7 @@
 package com.guild.jianshu.features.profile
 
+import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,22 +10,38 @@ import com.guild.jianshu.R
 import com.guild.jianshu.features.BaseFragment
 import com.guild.jianshu.features.profile.helper.ProfileHelper
 import com.guild.jianshu.features.profile.view.ProfileContainerView
+import com.guild.jianshu.features.profile.viewmodel.UserProfileViewModel
+import kotlinx.android.synthetic.main.profile_fragment.*
 
 /**
  * Created by pchen on 20/03/2018.
  */
 class ProfileFragment : BaseFragment() {
+    lateinit var userProfileViewModel: UserProfileViewModel
+
     companion object {
         fun newInstance(): ProfileFragment = ProfileFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
-        populateProfileContainerView(view)
+        initProfileInfoView(view)
+        initProfileContainerView(view)
         return view
     }
 
-    private fun populateProfileContainerView(view: View?) {
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        userProfileViewModel = ViewModelProviders.of(this).get(UserProfileViewModel::class.java)
+    }
+
+    private fun initProfileInfoView(view: View) {
+        profile_info_layout.setOnClickListener {
+
+        }
+    }
+
+    private fun initProfileContainerView(view: View?) {
         val profileArticleContainerView = view?.findViewById<ProfileContainerView>(R.id.profile_article_container)
         val profileArticleContainerItems = ProfileHelper.getProfileContainerItems(resources,
                 R.array.profile_articles, R.array.profile_article_icons)
