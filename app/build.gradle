@@ -41,6 +41,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation appDependencies.kotlin_stdlib
     implementation appDependencies.kotlin_ktx
+    implementation appDependencies.dagger
     implementation googleDependencies.support_appcompat
     implementation googleDependencies.support_constraint
     implementation googleDependencies.support_design
@@ -48,6 +49,7 @@ dependencies {
     implementation googleDependencies.lifecycle_reactivestreams
     kapt googleDependencies.lifecycle_compiler
 
+    kapt appDependencies.dagger_compiler
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.test_runner
     androidTestImplementation testDependencies.test_espresso
