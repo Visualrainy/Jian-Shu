@@ -5,13 +5,12 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import com.guild.jianshu.R
+import com.guild.jianshu.common.BaseFragment
 import com.guild.jianshu.features.discovery.DiscoveryFragment
 import com.guild.jianshu.features.message.MessageFragment
 import com.guild.jianshu.features.profile.ProfileFragment
 import com.guild.jianshu.features.publish.PublishFragment
 import com.guild.jianshu.features.recents.RecentFragment
-import com.guild.jianshu.features.view.disableShiftMode
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 

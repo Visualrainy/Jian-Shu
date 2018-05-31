@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.guild.jianshu.R
-import com.guild.jianshu.features.BaseFragment
+import com.guild.jianshu.common.BaseFragment
 
 /**
  * Created by pchen on 20/03/2018.

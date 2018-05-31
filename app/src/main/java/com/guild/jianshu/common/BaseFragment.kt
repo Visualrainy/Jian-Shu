@@ -1,4 +1,4 @@
-package com.guild.jianshu.features
+package com.guild.jianshu.common
 
 import android.support.v4.app.Fragment
 

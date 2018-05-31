@@ -1,23 +1,23 @@
 package com.guild.jianshu.features.profile
 
-import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.guild.jianshu.R
-import com.guild.jianshu.features.BaseFragment
+import com.guild.jianshu.common.BaseFragment
 import com.guild.jianshu.features.profile.helper.ProfileHelper
 import com.guild.jianshu.features.profile.view.ProfileContainerView
 import com.guild.jianshu.features.profile.viewmodel.UserProfileViewModel
-import kotlinx.android.synthetic.main.profile_fragment.*
 
 /**
  * Created by pchen on 20/03/2018.
  */
 class ProfileFragment : BaseFragment() {
-    lateinit var userProfileViewModel: UserProfileViewModel
+    private lateinit var userProfileViewModel: UserProfileViewModel
 
     companion object {
         fun newInstance(): ProfileFragment = ProfileFragment()
@@ -37,7 +37,9 @@ class ProfileFragment : BaseFragment() {
 
     private fun initProfileInfoView(view: View) {
         profile_info_layout.setOnClickListener {
-
+                userProfileViewModel.user?.observe(this, Observer { user ->
+                    Log.d("123123123","123123123123")
+            })
         }
     }
 

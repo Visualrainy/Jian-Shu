@@ -1,4 +1,4 @@
-package com.guild.jianshu.features.view
+package com.guild.jianshu.view
 
 import android.annotation.SuppressLint
 import android.support.design.internal.BottomNavigationItemView

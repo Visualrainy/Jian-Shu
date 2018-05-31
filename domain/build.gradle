@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+apply from: "$rootProject.projectDir/dependencies.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation appDependencies.rxjava
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
