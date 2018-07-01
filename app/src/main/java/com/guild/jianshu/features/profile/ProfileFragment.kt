@@ -10,14 +10,20 @@ import android.view.ViewGroup
 import com.guild.jianshu.R
 import com.guild.jianshu.common.BaseFragment
 import com.guild.jianshu.features.profile.helper.ProfileHelper
+import com.guild.jianshu.features.profile.presenter.UserPresenter
 import com.guild.jianshu.features.profile.view.ProfileContainerView
 import com.guild.jianshu.features.profile.viewmodel.UserProfileViewModel
+import kotlinx.android.synthetic.main.profile_fragment.*
+import javax.inject.Inject
 
 /**
  * Created by pchen on 20/03/2018.
  */
 class ProfileFragment : BaseFragment() {
     private lateinit var userProfileViewModel: UserProfileViewModel
+
+    @Inject
+    lateinit var userPresenter: UserPresenter
 
     companion object {
         fun newInstance(): ProfileFragment = ProfileFragment()
@@ -33,6 +39,7 @@ class ProfileFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         userProfileViewModel = ViewModelProviders.of(this).get(UserProfileViewModel::class.java)
+
     }
 
     private fun initProfileInfoView(view: View) {

@@ -1,24 +1,23 @@
 package com.plugin.guild.data.user.reporitory
 
-import com.guild.jianshu.data.api.Api
-import com.guild.jianshu.presenter.data.repositry.MemoryUserDataStore
-import com.guild.jianshu.presenter.data.repositry.RemoteUserDataStore
+import com.guild.jianshu.features.data.repositry.LocalUserDataSource
+import com.guild.jianshu.features.data.repositry.RemoteUserDataSource
+import com.plugin.guild.data.api.RetrofitApi
+import com.plugin.guild.data.user.entity.LoginRequest
+import com.plugin.guild.domain.user.model.User
+import com.plugin.guild.domain.user.repository.UserRepository
+import javax.inject.Inject
 
-class UserRepositoryImpl(val api: Api): UserRepository {
-    private val remoteUserRepo: UserDataStore
-    private val memoryUserCache: UserDataStore
-
-    init {
-        remoteUserRepo = RemoteUserDataStore()
-        memoryUserCache = MemoryUserDataStore()
+class UserRepositoryImpl @Inject constructor(private val retrofitApi: RetrofitApi,
+                                             private val remoteUserDataSource: RemoteUserDataSource,
+                                             private val localUserDataSource: LocalUserDataSource) : UserRepository {
+    override fun loginUser(userName: String, password: String): String {
+        retrofitApi.loginUser(LoginRequest(userName, password))
+        return "success"
     }
-    override fun getUserDetails() {
+
+    override fun userDetails(): User {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-
+        return User("test", "male")
     }
-
-    override fun login() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
 }

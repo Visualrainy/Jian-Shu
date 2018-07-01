@@ -1,4 +1,4 @@
-package com.guild.jianshu.di.moudles
+package com.guild.jianshu.di.modules
 
 import android.content.Context
 import dagger.Module
@@ -6,7 +6,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppMoudle(context: Context) {
+class AppModule(context: Context) {
     private val appContext = context.applicationContext
 
     @Singleton
