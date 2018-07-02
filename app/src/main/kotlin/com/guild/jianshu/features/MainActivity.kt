@@ -13,7 +13,6 @@ import com.guild.jianshu.features.publish.PublishFragment
 import com.guild.jianshu.features.recents.RecentFragment
 import com.guild.jianshu.view.disableShiftMode
 import kotlinx.android.synthetic.main.activity_main.*
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
