@@ -8,5 +8,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [UserModule::class])
 interface UserComponet {
-    fun inject(profileFragment: ProfileFragment)
+//    fun inject(profileFragment: ProfileFragment)
 }
